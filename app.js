@@ -132,6 +132,76 @@ function renderTable(programs) {
 function applyFilters() {
   const programs = filterPrograms();
   renderTable(programs);
+  syncStateToUrl();
+}
+
+function syncStateToUrl() {
+  const params = new URLSearchParams();
+  if (state.selectedSchools.size > 0) {
+    params.set('schools', [...state.selectedSchools].join(','));
+  }
+  if (state.selectedDirection) {
+    params.set('direction', state.selectedDirection);
+  }
+  if (state.includeRelated) {
+    params.set('related', '1');
+  }
+  const qs = params.toString();
+  const url = qs ? `${location.pathname}?${qs}` : location.pathname;
+  history.replaceState(null, '', url);
+}
+
+function restoreStateFromUrl() {
+  const params = new URLSearchParams(location.search);
+  const schools = params.get('schools');
+  const direction = params.get('direction');
+  const related = params.get('related') === '1';
+
+  if (schools) {
+    schools.split(',').filter(Boolean).forEach(id => {
+      const cb = document.querySelector(`[data-school][value="${id}"]`);
+      if (cb) { cb.checked = true; state.selectedSchools.add(id); }
+    });
+  }
+  if (direction) {
+    const select = document.getElementById('direction-select');
+    if ([...select.options].some(o => o.value === direction)) {
+      select.value = direction;
+      state.selectedDirection = direction;
+    }
+  }
+  if (related) {
+    document.getElementById('include-related').checked = true;
+    state.includeRelated = true;
+  }
+
+  if (state.selectedSchools.size > 0 && state.selectedDirection) {
+    applyFilters();
+  }
+}
+
+function showToast(msg) {
+  let toast = document.querySelector('.toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => toast.classList.remove('show'), 1800);
+}
+
+async function copyShareLink() {
+  syncStateToUrl();
+  const url = location.href;
+  try {
+    await navigator.clipboard.writeText(url);
+    showToast('链接已复制');
+  } catch {
+    showToast('复制失败，请手动复制地址栏');
+  }
 }
 
 function resetFilters() {
@@ -144,6 +214,7 @@ function resetFilters() {
   document.getElementById('results-summary').textContent = '';
   document.getElementById('results-table').innerHTML = '';
   document.getElementById('results-empty').classList.add('hidden');
+  history.replaceState(null, '', location.pathname);
 }
 
 async function init() {
@@ -157,6 +228,9 @@ async function init() {
   document.getElementById('btn-apply').addEventListener('click', applyFilters);
   document.getElementById('btn-reset').addEventListener('click', resetFilters);
   document.getElementById('btn-print').addEventListener('click', () => window.print());
+  document.getElementById('btn-share').addEventListener('click', copyShareLink);
+
+  restoreStateFromUrl();
 }
 
 init();

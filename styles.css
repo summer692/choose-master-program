@@ -237,6 +237,26 @@ table.compare .program-header {
   color: var(--muted);
 }
 
+.topbar-actions { display: flex; align-items: center; gap: 8px; }
+
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #111827;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(-4px); }
+
 @media print {
   .topbar-actions, .filters, .footer { display: none; }
   .layout { grid-template-columns: 1fr; padding: 0; }
