@@ -212,6 +212,12 @@ table.compare .program-header {
 }
 .course-list li { margin-bottom: 2px; }
 
+.intro-text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #374151;
+}
+
 .career-tags { display: flex; flex-wrap: wrap; gap: 4px; }
 .career-tags span {
   background: #ecfdf5;
