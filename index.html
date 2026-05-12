@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>香港研究生专业对比 · MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <h1>香港研究生专业对比</h1>
+      <span class="tag">MVP · 示例数据请核对官网</span>
+    </div>
+    <div class="topbar-actions">
+      <button id="btn-print" class="btn-primary">导出 PDF（浏览器打印）</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <aside class="filters">
+      <section class="filter-block">
+        <h2>选择学校</h2>
+        <div id="school-list" class="checkbox-list"></div>
+      </section>
+
+      <section class="filter-block">
+        <h2>选择方向</h2>
+        <select id="direction-select"></select>
+        <label class="toggle">
+          <input type="checkbox" id="include-related" />
+          <span>纳入相关专业（金融科技 / 金融工程 / 商业分析 等）</span>
+        </label>
+      </section>
+
+      <section class="filter-block">
+        <button id="btn-apply" class="btn-primary full">应用筛选</button>
+        <button id="btn-reset" class="btn-secondary full">重置</button>
+      </section>
+
+      <section class="filter-block notice">
+        <strong>提示</strong>
+        <p>本页所有数据为产品原型示例，最终决策请以各校招生官网为准。每个字段右侧的 ↗ 可跳转到对应官网。</p>
+      </section>
+    </aside>
+
+    <section class="results">
+      <div id="results-summary" class="results-summary"></div>
+      <div id="results-table" class="results-table"></div>
+      <div id="results-empty" class="results-empty hidden">
+        <p>暂无匹配项目。请调整学校或方向，或勾选「纳入相关专业」。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>原型版本 · 数据待人工核对 · 反馈：你自己加</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

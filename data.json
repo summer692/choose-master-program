@@ -1,0 +1,263 @@
+{
+  "_note": "种子数据仅用于产品原型演示。所有数值需对照各校官网核实后方可对外使用。",
+  "schools": [
+    { "id": "hku",   "name_zh": "香港大学",     "name_en": "The University of Hong Kong",         "short": "HKU"   },
+    { "id": "cuhk",  "name_zh": "香港中文大学", "name_en": "The Chinese University of Hong Kong", "short": "CUHK"  },
+    { "id": "hkust", "name_zh": "香港科技大学", "name_en": "The Hong Kong University of Science and Technology", "short": "HKUST" },
+    { "id": "cityu", "name_zh": "香港城市大学", "name_en": "City University of Hong Kong",        "short": "CityU" },
+    { "id": "polyu", "name_zh": "香港理工大学", "name_en": "The Hong Kong Polytechnic University","short": "PolyU" }
+  ],
+  "directions": [
+    {
+      "id": "finance",
+      "name_zh": "金融",
+      "related": ["fintech", "financial_engineering", "business_analytics", "economics"]
+    },
+    { "id": "fintech",              "name_zh": "金融科技",   "related": ["finance", "business_analytics"] },
+    { "id": "financial_engineering","name_zh": "金融工程",   "related": ["finance", "fintech"] },
+    { "id": "business_analytics",   "name_zh": "商业分析",   "related": ["finance", "fintech"] },
+    { "id": "economics",            "name_zh": "经济学",     "related": ["finance"] }
+  ],
+  "programs": [
+    {
+      "id": "hku-mfin",
+      "school_id": "hku",
+      "direction_id": "finance",
+      "name_zh": "金融硕士",
+      "name_en": "Master of Finance",
+      "duration": "1 年全日制 / 2 年兼读制",
+      "tuition_hkd": 396000,
+      "ielts": "6.0（小分不低于 5.5）",
+      "toefl": "80",
+      "gmat_gre": "强烈建议提交，竞争激烈",
+      "background": "本科任意专业，量化/金融背景优先",
+      "core_courses": [
+        "Financial Economics", "Corporate Finance", "Investments and Portfolio Analysis",
+        "Derivatives", "Financial Statement Analysis", "Quantitative Methods"
+      ],
+      "elective_courses": [
+        "Risk Management", "Fixed Income", "Mergers & Acquisitions",
+        "Private Equity", "FinTech and Financial Innovation"
+      ],
+      "career_outcomes": ["投行/券商", "买方机构", "企业金融", "咨询", "监管机构"],
+      "official_url": "https://www.fbe.hku.hk/programmes/master-of-finance/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "hku-mfin-fintech",
+      "school_id": "hku",
+      "direction_id": "fintech",
+      "name_zh": "金融科技硕士",
+      "name_en": "Master of Finance in Financial Technology",
+      "duration": "1 年全日制 / 2 年兼读制",
+      "tuition_hkd": 396000,
+      "ielts": "6.0（小分不低于 5.5）",
+      "toefl": "80",
+      "gmat_gre": "建议提交",
+      "background": "本科任意专业，计算机/数学/金融背景优先",
+      "core_courses": [
+        "FinTech Foundations", "Blockchain and Cryptocurrencies",
+        "Big Data in Finance", "Machine Learning for Finance", "Quantitative Methods"
+      ],
+      "elective_courses": [
+        "Algorithmic Trading", "RegTech", "Digital Payments",
+        "AI in Finance", "Cybersecurity in Finance"
+      ],
+      "career_outcomes": ["金融科技公司", "投行科技部门", "数字资产", "咨询", "支付/清算"],
+      "official_url": "https://www.fbe.hku.hk/programmes/master-of-finance-in-financial-technology/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "cuhk-msc-finance",
+      "school_id": "cuhk",
+      "direction_id": "finance",
+      "name_zh": "金融学硕士",
+      "name_en": "MSc in Finance",
+      "duration": "1 年全日制 / 2 年兼读制",
+      "tuition_hkd": 378000,
+      "ielts": "6.5",
+      "toefl": "79",
+      "gmat_gre": "建议提交 GMAT 650+ / GRE 等同",
+      "background": "本科金融/经济/商科/工科，需修过微积分与统计",
+      "core_courses": [
+        "Financial Theory", "Investment Analysis", "Corporate Finance",
+        "Derivative Securities", "Empirical Methods in Finance"
+      ],
+      "elective_courses": [
+        "Fixed Income Securities", "International Finance", "Real Estate Finance",
+        "Behavioral Finance", "FinTech"
+      ],
+      "career_outcomes": ["投行", "资管/基金", "金融科技", "审计/咨询", "企业财务"],
+      "official_url": "https://www.bschool.cuhk.edu.hk/master-programmes/msc-in-finance/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "cuhk-msc-fe",
+      "school_id": "cuhk",
+      "direction_id": "financial_engineering",
+      "name_zh": "金融工程硕士",
+      "name_en": "MSc in Financial Engineering",
+      "duration": "1 年全日制 / 2 年兼读制",
+      "tuition_hkd": 360000,
+      "ielts": "6.5",
+      "toefl": "79",
+      "gmat_gre": "建议提交，量化背景下可弱化",
+      "background": "本科理工科/数学/金融工程，需扎实编程与数学",
+      "core_courses": [
+        "Stochastic Calculus", "Numerical Methods", "Fixed Income",
+        "Derivatives Pricing", "Risk Management", "Financial Programming"
+      ],
+      "elective_courses": [
+        "Machine Learning in Finance", "Credit Risk", "Algorithmic Trading",
+        "C++ for Finance", "Energy Derivatives"
+      ],
+      "career_outcomes": ["Quant 研究/交易", "风险管理", "对冲基金", "金融科技", "PhD 深造"],
+      "official_url": "https://www.cuhk.edu.hk/mscfe/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "hkust-msc-finance",
+      "school_id": "hkust",
+      "direction_id": "finance",
+      "name_zh": "金融学硕士",
+      "name_en": "MSc in Finance",
+      "duration": "1 年全日制",
+      "tuition_hkd": 420000,
+      "ielts": "6.5",
+      "toefl": "80",
+      "gmat_gre": "强制要求，GMAT 中位数 700+",
+      "background": "本科任意专业，需修过金融/经济相关课程",
+      "core_courses": [
+        "Investments", "Financial Markets", "Corporate Finance",
+        "Financial Econometrics", "Derivatives"
+      ],
+      "elective_courses": [
+        "Hedge Funds", "Private Equity", "China Capital Markets",
+        "ESG Investing", "FinTech"
+      ],
+      "career_outcomes": ["投行（IBD/Markets）", "私募/对冲基金", "买方研究", "咨询", "企业战略"],
+      "official_url": "https://www.bm.ust.hk/msc-fin/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "hkust-msc-fintech",
+      "school_id": "hkust",
+      "direction_id": "fintech",
+      "name_zh": "金融科技硕士",
+      "name_en": "MSc in FinTech",
+      "duration": "1 年全日制",
+      "tuition_hkd": 420000,
+      "ielts": "6.5",
+      "toefl": "80",
+      "gmat_gre": "建议提交",
+      "background": "需具备编程基础（Python 等）与金融/数学/工科背景",
+      "core_courses": [
+        "FinTech Foundations", "Blockchain", "Data Science for Finance",
+        "Machine Learning", "Quantitative Investment"
+      ],
+      "elective_courses": [
+        "Smart Contracts", "Digital Assets", "RegTech",
+        "AI Trading Systems", "Cyber Risk"
+      ],
+      "career_outcomes": ["金融科技公司", "Quant", "区块链/数字资产", "银行科技部", "咨询"],
+      "official_url": "https://www.bm.ust.hk/msc-fintech/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "hkust-msc-ba",
+      "school_id": "hkust",
+      "direction_id": "business_analytics",
+      "name_zh": "商业分析硕士",
+      "name_en": "MSc in Business Analytics",
+      "duration": "1 年全日制",
+      "tuition_hkd": 396000,
+      "ielts": "6.5",
+      "toefl": "80",
+      "gmat_gre": "建议提交",
+      "background": "本科任意专业，需编程与统计基础",
+      "core_courses": [
+        "Statistical Analysis", "Data Mining", "Business Intelligence",
+        "Optimization", "Machine Learning"
+      ],
+      "elective_courses": [
+        "Marketing Analytics", "Financial Analytics", "Supply Chain Analytics",
+        "Text Mining", "Deep Learning"
+      ],
+      "career_outcomes": ["数据科学家", "咨询", "互联网产品/运营分析", "金融数据分析", "市场研究"],
+      "official_url": "https://www.bm.ust.hk/msc-ba/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "cityu-msc-finance",
+      "school_id": "cityu",
+      "direction_id": "finance",
+      "name_zh": "金融学硕士",
+      "name_en": "MSc in Finance",
+      "duration": "1 年全日制 / 2 年兼读制",
+      "tuition_hkd": 282000,
+      "ielts": "6.5",
+      "toefl": "79",
+      "gmat_gre": "非必需",
+      "background": "本科商科/经济/理工，需基础数学统计",
+      "core_courses": [
+        "Corporate Finance", "Investment Analysis", "Financial Economics",
+        "Financial Derivatives", "Quantitative Analysis for Finance"
+      ],
+      "elective_courses": [
+        "Financial Risk Management", "International Finance",
+        "China Financial Markets", "Behavioral Finance", "FinTech"
+      ],
+      "career_outcomes": ["商业银行", "证券/资管", "企业财务", "金融科技", "审计"],
+      "official_url": "https://www.cb.cityu.edu.hk/programmes/MSCFIN/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "cityu-msc-fe",
+      "school_id": "cityu",
+      "direction_id": "financial_engineering",
+      "name_zh": "金融工程与金融科技硕士",
+      "name_en": "MSc in Financial Engineering & FinTech",
+      "duration": "1 年全日制 / 2 年兼读制",
+      "tuition_hkd": 282000,
+      "ielts": "6.5",
+      "toefl": "79",
+      "gmat_gre": "非必需",
+      "background": "本科理工/数学/金融工程，需编程与数学",
+      "core_courses": [
+        "Stochastic Processes", "Financial Engineering",
+        "Numerical Methods", "Financial Programming", "Risk Management"
+      ],
+      "elective_courses": [
+        "Machine Learning in Finance", "Blockchain",
+        "Algorithmic Trading", "Credit Derivatives", "Big Data Analytics"
+      ],
+      "career_outcomes": ["Quant 分析师", "风控", "金融科技", "投行科技部", "PhD 深造"],
+      "official_url": "https://www.cb.cityu.edu.hk/programmes/MSCFE/",
+      "source_updated": "demo-2025-12"
+    },
+    {
+      "id": "polyu-msc-finance",
+      "school_id": "polyu",
+      "direction_id": "finance",
+      "name_zh": "金融学（投资管理）硕士",
+      "name_en": "MSc in Finance (Investment Management)",
+      "duration": "1 年全日制 / 2-3 年兼读制",
+      "tuition_hkd": 252000,
+      "ielts": "6.0",
+      "toefl": "80",
+      "gmat_gre": "非必需",
+      "background": "本科任意专业，金融/会计背景优先",
+      "core_courses": [
+        "Corporate Finance", "Investment Analysis", "Portfolio Management",
+        "Derivatives", "Financial Modelling"
+      ],
+      "elective_courses": [
+        "Fixed Income", "Alternative Investments",
+        "International Finance", "FinTech", "ESG Investing"
+      ],
+      "career_outcomes": ["资管/基金", "财富管理", "投行后台", "企业财务", "保险"],
+      "official_url": "https://www.polyu.edu.hk/afrc/programmes/taught-postgraduate/msc-in-finance-investment-management/",
+      "source_updated": "demo-2025-12"
+    }
+  ]
+}
