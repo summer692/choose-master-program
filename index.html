@@ -3,59 +3,74 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>香港研究生专业对比 · MVP</title>
+  <title>硕选 HK · 香港研究生专业对比</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <div class="brand">
-      <h1>香港研究生专业对比</h1>
-      <span class="tag">MVP · 示例数据请核对官网</span>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="./">硕选 HK</a>
+      <div class="nav-actions">
+        <button id="btn-share" class="nav-btn">分享</button>
+        <button id="btn-print" class="nav-btn">导出</button>
+      </div>
     </div>
-    <div class="topbar-actions">
-      <button id="btn-share" class="btn-secondary">复制分享链接</button>
-      <button id="btn-print" class="btn-primary">导出 PDF（浏览器打印）</button>
+  </nav>
+
+  <section class="hero">
+    <h1 class="hero-title">
+      在香港，<br/>找到属于你的<br/><span class="accent">那一个</span>硕士项目。
+    </h1>
+    <p class="hero-sub">把港八大的硕士项目放在一张桌上，逐项比较。</p>
+    <a class="hero-cta" href="#tool">开始对比 ↓</a>
+  </section>
+
+  <section class="tool" id="tool">
+    <div class="tool-inner">
+      <div class="filter-block">
+        <div class="filter-label">学校</div>
+        <div id="school-pills" class="pill-group"></div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-label">方向</div>
+        <div id="direction-pills" class="pill-group"></div>
+      </div>
+
+      <div class="filter-block">
+        <div class="filter-switch-row">
+          <div>
+            <div class="filter-label inline">纳入相关专业</div>
+            <div class="filter-hint">把相关领域（金融科技、金融工程、商业分析等）也加入对比</div>
+          </div>
+          <label class="switch">
+            <input type="checkbox" id="include-related" />
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="filter-actions">
+        <button id="btn-reset" class="text-btn">清空筛选</button>
+      </div>
     </div>
-  </header>
+  </section>
 
-  <main class="layout">
-    <aside class="filters">
-      <section class="filter-block">
-        <h2>选择学校</h2>
-        <div id="school-list" class="checkbox-list"></div>
-      </section>
-
-      <section class="filter-block">
-        <h2>选择方向</h2>
-        <select id="direction-select"></select>
-        <label class="toggle">
-          <input type="checkbox" id="include-related" />
-          <span>纳入相关专业（金融科技 / 金融工程 / 商业分析 等）</span>
-        </label>
-      </section>
-
-      <section class="filter-block">
-        <button id="btn-apply" class="btn-primary full">应用筛选</button>
-        <button id="btn-reset" class="btn-secondary full">重置</button>
-      </section>
-
-      <section class="filter-block notice">
-        <strong>提示</strong>
-        <p>本页所有数据为产品原型示例，最终决策请以各校招生官网为准。每个字段右侧的 ↗ 可跳转到对应官网。</p>
-      </section>
-    </aside>
-
-    <section class="results">
+  <section class="results">
+    <div class="results-inner">
       <div id="results-summary" class="results-summary"></div>
       <div id="results-table" class="results-table"></div>
-      <div id="results-empty" class="results-empty hidden">
-        <p>暂无匹配项目。请调整学校或方向，或勾选「纳入相关专业」。</p>
+      <div id="results-empty" class="results-empty">
+        <p>选择学校与方向，开始对比。</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
   <footer class="footer">
-    <small>原型版本 · 数据待人工核对 · 反馈：你自己加</small>
+    <div class="footer-inner">
+      <p>所有数据为产品原型示例，最终决策请以各校招生官网为准。</p>
+      <p class="footer-copy">硕选 HK · 原型版本</p>
+    </div>
   </footer>
 
   <script src="app.js"></script>
