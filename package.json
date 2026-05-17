@@ -1,0 +1,19 @@
+{
+  "name": "choose-master-program",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "verify": "node scripts/verify.js",
+    "verify:fresh": "node scripts/verify.js --no-cache",
+    "check-urls": "node scripts/check-urls.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.5",
+    "openai": "^4.77.0"
+  }
+}
